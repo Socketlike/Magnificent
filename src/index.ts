@@ -34,7 +34,7 @@ export const start = async (): Promise<void> => {
           return tree?.type === 'img' && tree.props && !tree.props.className;
         }) as unknown as JSX.Element;
 
-        if (image && image.props?.src === 'string')
+        if (image && typeof image.props?.src === 'string')
           image.props.src = image.props.src.replace(/\?width=[0-9]+&height=[0-9]+$/, '');
       }
 
