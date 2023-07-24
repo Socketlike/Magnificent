@@ -1,18 +1,21 @@
 {
-  "id": "dev.replugged.PluginTemplate",
-  "name": "Plugin Template",
-  "description": "A plugin template",
+  "$schema": "https://socketlike.github.io/replugged/plugin.schema.json",
+  "id": "lib.evelyn.Magnificent",
+  "name": "Magnificent",
+  "description": "A Post-SWC Replugged plugin that removes the width & height restriction on images' source URLs in popouts.",
   "author": {
-    "name": "replugged",
-    "discordID": "1000992611840049192",
-    "github": "replugged-org"
+    "name": "Evelyn",
+    "discordID": "285329659023851520",
+    "github": "Socketlike"
   },
   "version": "1.0.0",
   "updater": {
     "type": "github",
-    "id": "replugged-org/plugin-template"
+    "id": "Socketlike/Magnificent"
   },
   "license": "MIT",
   "type": "replugged-plugin",
-  "renderer": "src/index.ts"
+  "renderer": "src/index.ts",
+  "source": "https://github.com/Socketlike/Magnificent",
+  "image": "https://media.discordapp.net/attachments/907813363294277652/1133028405298864178/FdcFooiY.gif"
 }
