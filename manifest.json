@@ -10,8 +10,8 @@
   },
   "version": "1.0.1",
   "updater": {
-    "type": "github",
-    "id": "Socketlike/Magnificent"
+    "type": "store",
+    "id": "lib.evelyn.Magnificent"
   },
   "license": "MIT",
   "type": "replugged-plugin",
