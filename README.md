@@ -36,4 +36,4 @@ Or any theme really.
 
 ## Previews?
 
-![insert very magnificent and trauma inducing gif for dark theme enjoyers that doesn't work because the gif is too big](https://media.discordapp.net/attachments/907813363294277652/1133028405298864178/FdcFooiY.gif)
+![insert very magnificent and trauma inducing gif for dark theme enjoyers](preview.gif)
