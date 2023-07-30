@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-  a post-swc Replugged plugin that removes the width & height restriction on the `img` element's `src` in popouts.
+  a post-swc Replugged plugin that removes the width & height restriction on the img element's src in image popouts.
 </p>
 
 ## But I see no difference!

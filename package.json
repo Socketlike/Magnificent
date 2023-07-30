@@ -1,7 +1,7 @@
 {
   "name": "Magnificent",
   "version": "1.0.11",
-  "description": "A Post-SWC Replugged plugin that removes the width & height restriction on the `img` element's `src` in popouts.",
+  "description": "A Post-SWC Replugged plugin that removes the width & height restriction on the img element's src in image popouts.",
   "engines": {
     "node": ">=18.0.0",
     "pnpm": ">=8.0.0"
