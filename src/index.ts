@@ -35,7 +35,9 @@ export const start = async (): Promise<void> => {
         }) as unknown as JSX.Element;
 
         if (image && typeof image.props?.src === 'string')
-          image.props.src = image.props.src.replace(/\?width=[0-9]+&height=[0-9]+$/, '');
+          image.props.src = image.props.src
+            .replace(/\?width=[0-9]+&height=[0-9]+$/, '')
+            .replace('media.discordapp.net', 'cdn.discordapp.com');
       }
 
       return res;
