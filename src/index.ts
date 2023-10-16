@@ -12,7 +12,7 @@ interface ImageComponent {
 }
 
 export const start = async (): Promise<void> => {
-  const imageComponent = await webpack.waitForModule<ImageComponent>(
+  const imageComponent = await webpack.waitForModule<ImageComponent | undefined>(
     webpack.filters.bySource('"imageClassName"'),
   );
 
@@ -25,16 +25,13 @@ export const start = async (): Promise<void> => {
       const image = util.findInReactTree(res as unknown as util.Tree, (_): boolean => {
         const element = _ as unknown as JSX.Element;
 
-        if (element?.props?.className?.match?.(/clickable-/)) isEmbed = true;
+        if (element.props?.className?.match?.(/clickable-/)) isEmbed = true;
 
-        return (
-          (element?.type === 'img' &&
-            typeof element?.props?.src === 'string' &&
-            !element?.props?.className) ||
-          isEmbed
-        );
-      }) as unknown as JSX.Element;
+        return (element.type === 'img' && typeof element.props?.src === 'string') || isEmbed;
+      }) as unknown as JSX.Element | undefined;
 
+      // (!isEmbed) can be false too.
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
       if (image && !isEmbed)
         image.props.src = image.props.src
           .replace(/\?width=[0-9]+&height=[0-9]+$/, '')
