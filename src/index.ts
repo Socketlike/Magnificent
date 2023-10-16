@@ -25,13 +25,12 @@ export const start = async (): Promise<void> => {
       const image = util.findInReactTree(res as unknown as util.Tree, (_): boolean => {
         const element = _ as unknown as JSX.Element;
 
-        if (element?.props?.className?.match?.(/clickable-/))
-          isEmbed = true;
+        if (element?.props?.className?.match?.(/clickable-/)) isEmbed = true;
 
         return (
-          element?.type === 'img' &&
-          typeof element?.props?.src === 'string' &&
-          !element?.props?.className ||
+          (element?.type === 'img' &&
+            typeof element?.props?.src === 'string' &&
+            !element?.props?.className) ||
           isEmbed
         );
       }) as unknown as JSX.Element;
