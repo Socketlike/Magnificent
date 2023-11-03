@@ -24,6 +24,9 @@
   a post-swc Replugged plugin that removes the width & height restriction on the img element's src in image popouts.
 </p>
 
+> **Warning**
+> This plugin has moved to [**Socketlike/replugged-plugins**](https://github.com/Socketlike/replugged-plugins)
+
 ## But I see no difference!
 
 This only removes the `?width=(number)&height=(number)` at the end of images' source URLs.  
